@@ -23,20 +23,18 @@
 
 # Day 3 - 11/09/19 
 ## TODO: Reestruturar Acrônimos e Sublistas
-## First Module from Mule Training Plataform
 ### [Módulo 1: Introducing Application Networks And Api-led Connectivity](http://bit.ly/2kAEZ3u)
 - [Modelo que prioriza o consumo](http://bit.ly/2mdqxyA): Envolvidos focados em desenvolver com base em feedbacks e métricas de uso, criando Assests reutilizáveis seguindo o conceito de Modern API.
-- [Modern API](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide13.png)
-	* É "discoverable"
-	* Projetado para fácil consumo, 
+- [Modern API](http://bit.ly/2khRUa9)
+	* É discoverable e projetada para fácil consumo.
 	* Facilmente gerenciado para segurança, escalabilidade e desempenho.   
-- [API-led connectivity](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide14.png)
-	* Experience API [Expor API]: Fornecer insumos que um projeto precisa para se tornar realidade. 
-	* Process API [Agregação de negócio]: Processos de negócio que podem ser reaproveitados entre projetos, encapsulados de business rules. Essa camada pode não ser necessária. 
-		+ Exemplo: criar uma API para consumir 2 system APIs
-	* System API [Expor dados]: Expõe recursos de sistemas (Unlock your data). 
-		+ Exemplo: CRUD de funcionários de duas bases diferentes se tornando 2 SystemAPIs .
-	
+- [API-led connectivity](http://bit.ly/2mfkr0F)
+	* **Experience API** [`Expor API`]: Fornecer insumos que um projeto precisa para se tornar realidade. 
+	* **Process API** [`Agregação de negócio`]: Processos de negócio que podem ser reaproveitados entre projetos, encapsulados de business rules. Essa camada pode não ser necessária. 
+		+ Exemplo: Criar uma API para consumir 2 system APIs
+	* **System API** [`Expor dados`]: Expõe recursos de sistemas (Unlock your data). 
+		+ Exemplo: CRUD de funcionários de duas bases diferentes se tornando 2 SystemAPIs
+- [C4E](http://bit.ly/2kLAwee): Time formado por profissionais de varias áreas, onde seu objetivo é planejar/desenvolver assets seguindo API-led e propagar isso na cultura da empresa.
 - [ ] !!Sumarizar Notas sobre led connectivity e extrair dos acronymos!!
 - [ ] !!Sumarizar Notas sobre Application Network e extrair dos acronymos!!
 - [Revisão sobre API](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide26.png): O que é, princípios, etc.
