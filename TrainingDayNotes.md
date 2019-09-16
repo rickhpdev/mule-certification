@@ -102,18 +102,26 @@
 
 ### _Módulo 4: Bulding APIS_ (Parte 2)
 - [DataWeave 2.0](http://bit.ly/2mf27Vq): Linguagem para acessar, pesquisar e transformar dados.
-- Parte prática:
-	* Transformação de dados (mapeamento) com DataWeave
-	* Importar nosso projeto do Anypoint para o Studio
-	* Feito endpoints dos verbos GET (byId e geral) / POST
-	* 
-
 - [API Kit Router](http://bit.ly/2kzIRBL): 
 	* Le RAML importado e cria toda estrutura abstraindo em `conectores` / `fluxos` / `validações`.
 	* Faz match para criar flows usando `Verbo` e `Path`, criando somente um Event Source (Api KitRouber) que redireciona corretamente para respectivo flow. 
 	* Cria toda estrutura de validação de atributos (required, tipo, etc)
+- Parte prática:
+	* Transformação de dados (mapeamento) com DataWeave
+	* Importar nosso projeto do Anypoint para o Studio
+	* Feito endpoints dos verbos GET (byId e geral) / POST
+	* Apontado Interface (projeto importado) paras Implementações no Anypoint Studio.
 
 ### _Módulo 5: Deploying And Managing Apis_
+- CloudHub (`PaaS`): Ambiente de cloud da Mulesoft que roda na `AWS` para hospedar aplicações, conta com uma ótima estrutura já pronta.
+- Customer-hosted Mule runtimes: Caso a empresa queira hospedar por contra própria utilizando o próprio ambiente ou outro serviço de cloud.
+- [CloudHub Worker](http://bit.ly/2lSXS1E): Instância dedicada do Mule que executa uma aplicação, sendo que cada um:
+	* Roda num container separado
+	* Deployado e monitorado separadamente
+	* Roda em uma específica região do mundo
+- Parte prática:
+	* Deployada aplicação no CloudHub
+	* Monitoração da API através to `Runtime Manager` ao efetuar requisições para aplicação Deployada.
 
 
 <a id="importantReview"/></a>
@@ -124,8 +132,9 @@
 - [Application Network](http://bit.ly/2mj58nO): Rede de aplicações do projeto que é criada com base em assets bem estruturados e reutilizáveis.
 - [API Life Cycle](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide48.png): Fases de desenvolvimento de uma API
 - Unlock your data: Expor recursos/dados
-- iPaaS: Integration platform as a service. Isso é o que o Mule é
+- iPaaS: Integration platform as a service. Mule se encaixa nessa categoria.
 - API Kit: Valida requests com relação às especificações do RAML e as direciona para implementações da API, criando toda estrutura com base nisso (conectores, validações, etc)
+- CloudHub: Ambiente de cloud da Mulesoft
 
 
 <a id="possibleQuestions"/></a>
@@ -134,6 +143,8 @@
 	* Para fins de prova, cada HTTP Method.
 - Qual é a configuração mínima necessária em um fluxo para uma aplicação Mule compilar? 
 	* Event Processor
+- Quantas aplicações um CloudHub worker roda?
+	* Somente UMA 
 
 
 ### Search Later / Review
