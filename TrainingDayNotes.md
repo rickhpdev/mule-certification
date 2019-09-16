@@ -1,11 +1,10 @@
 ## Sumário
-- <a href="#day1">Day 1</a> e <a href="#day2">Day 2</a>: Conjunto de [Slides](http://bit.ly/2mcVZNn) com Introdução a tópicos importantes/requisitos para treinamento de MULE.
+- <a href="#day1">Day 1</a> e <a href="#day2">Day 2</a>: Conjunto de [Slides](http://bit.ly/2mcVZNn) com Introdução a tópicos importantes/requisitos para treinamento.
 - <a href="#day3">Day 3</a>
 - <a href="#day4">Day 4</a>
 - <a href="#day5">Day 5</a>
-- <a href="#day5">Day 6</a>
+- <a href="#day6">Day 6</a>
 - <a href="#importantReview">Importantes Termos / Acrónimos (para Revisar)</a>
-
 
 <a id="day1"/></a>
 ## Day 1 - 09/09/19
@@ -28,8 +27,7 @@
 
 <a id="day2"/></a>
 ## Day 2 - 10/09/19
-- ...
-
+- Irei sumarizar no futuro (feel free to add)
 
 <a id="day3"/></a>
 ## Day 3 - 11/09/19 
@@ -55,9 +53,8 @@
 <a id="day4"/></a>
 ## Day 4 - 12/09/19 
 ### _Módulo 2: Introducing anypoint platform_
-
 - Apresentado Anypoint Plataform que é: Uma plataforma empresarial para criação de APIs, integrações e redes de aplicativos.
-- [Pilares da abordagem MuleSoft](http://bit.ly/2lS1G3c): 
+- [Pilares da abordagem MuleSoft](http://bit.ly/2lS1G3c)
  * Business outcomes: Alinhamento com stakeholders.
  * Technology Delivery: Utilizar Anypoint Platform para desenvolver as soluções.
  * Organization enablement: Capacitação da organização.
