@@ -1,27 +1,30 @@
-# Day 1 - 09/09/19
-• SOA
-- Arquitetura visando sempre agregar no negócio.
-- Processo de design/desenvolvimento em mais alto nível de abstração visando ser visível para mais pessoas.
-- Desenvolver pensando em reutilização / evolução na solução como um todo.
-- Solução flexível a ponto de ser facilmente adaptável em futuras mudanças de requisitos.
-- Características técnicas: Reutilizável, Autonomia (não dependente/acoplado), Modularizado, Não manter estado, Descobrimento de serviço (priorizar soluções existentes que podem ajudar na resolução do seu problema)
-• Arquitetura de Micro Serviços
-- Comparação referente ao SOA
-- Diversas Características e discussão sobre esses pontos
-- Prós e Contras relacionados
-• SOAP
-- Protocolo para troca de informações estruturadas em uma plataforma descentralizada e distribuída.
-- Exemplos de request SOAP utilizando SOAP UI
-• REST
-- Definição / Principios
-- Descrição e discussão sobre características
+## Sumário
+- Day 1 e Day 2: 
+
+## Day 1 - 09/09/19
+- SOA (Service-Oriented Architecture)
+	* Arquitetura visando sempre agregar no negócio.
+	* Processo de design/desenvolvimento em mais alto nível de abstração visando ser visível para mais pessoas.
+	* Desenvolver pensando em reutilização / evolução na solução como um todo.
+	* Solução flexível a ponto de ser facilmente adaptável em futuras mudanças de requisitos.
+	* Características técnicas: Reutilizável, Autonomia (não dependente/acoplado), Modularizado, Não manter estado, Descobrimento de serviço (priorizar soluções existentes que podem ajudar na resolução do seu problema)
+- Arquitetura de Micro Serviços
+	* Comparação referente ao SOA
+	* Diversas Características e discussão sobre esses pontos
+	* Prós e Contras relacionados
+- SOAP
+	* Protocolo para troca de informações estruturadas em uma plataforma descentralizada e distribuída.
+	* Exemplos de request SOAP utilizando SOAP UI
+- REST
+	* Definição / Principios
+	* Descrição e discussão sobre características
 
 
-# Day 2 - 10/09/19
+## Day 2 - 10/09/19
 - ...
 
 
-# Day 3 - 11/09/19 
+## Day 3 - 11/09/19 
 ## TODO: Reestruturar Acrônimos e Sublistas
 ### [Módulo 1: Introducing Application Networks And Api-led Connectivity](http://bit.ly/2kAEZ3u)
 - [Modelo que prioriza o consumo](http://bit.ly/2mdqxyA): Envolvidos focados em desenvolver com base em feedbacks e métricas de uso, criando Assests reutilizáveis seguindo o conceito de Modern API.
@@ -44,11 +47,11 @@
 - Walk-Thru no Portal de Assets do MuleSoft (Exchange) 
 
 
-## Important Acronymous / Terms
+### Important Acronymous / Terms
 - LoB IT: Line of Business
 - Central IT: Desenvolvedores (nós)      
 
-- [C4E](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide18.png) (Center for Enabletment): Time formado por profissionais de varias áreas, onde seu objetivo é desenvolver assets de modo a propagar a forma do API-led pela cultura da companhia.
+- [C4E](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide18.png) (Center for Enablement): Time formado por profissionais de varias áreas, onde seu objetivo é desenvolver assets de modo a propagar a forma do API-led pela cultura da companhia.
 - Application Network: Rede de aplicações do projeto, construídas tendo a relação com essas aplicações sendo construídas seguindo a API-led em conjunto com o C4E.
 - [API Life Cycle](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide48.png): Fases de desenvolvimento de uma API
 - [ ]  Unlock your data: Expor dados
@@ -64,7 +67,7 @@
 
 
 
-# Day 4 - 12/09/19 
+## Day 4 - 12/09/19 
 ## TODO: Reestruturar Acrônimos e Sublistas
 
 - Apresentado Anypoint Plataform que é: Uma plataforma empresarial para criação de APIs, integrações e redes de aplicativos.
@@ -98,7 +101,7 @@
 
 ### Search Later / Review
 
-# Day 4 - 12/09/19 
+## Day 5 - 13/09/19 
 ## TODO: Revisar módulos e fazer mais anotações
 ### [Módulo Design APIs](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3807/8aac83b8-c6fc-3f51-bb6d-9e70bbca086d?complete=0&tab=overview)
 - RAML
