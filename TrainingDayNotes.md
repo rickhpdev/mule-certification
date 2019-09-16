@@ -28,7 +28,35 @@
 
 <a id="day2"/></a>
 ## Day 2 - 10/09/19
-- Irei sumarizar no futuro (feel free to add)
+- EIP Patterns
+	- Request-reply: two way communication
+	- Message Router: decisão de roteamento não está relacionada ao conteúdo da mensagem
+	- Content-Based router: examina o conteúdo da mensagem e com base nisso, faz o roteamento
+	- Publish and Subscribe
+	- Dead Letter Channel
+AnypointMQ é o serviço de mensageria Mule
+
+- Guaranteed Delivery:
+	* Protocolo que garante a entrega da mensagem: TCP
+	* Protocolo que não garante a entrega: UDP
+
+- Como é feita a troca de mensagens entre os componentes Mule: event-driven architecture;
+	* Cada componente já espera receber mensagens e enviar mensagens, tudo orquestrado pelo java runtime, a troca de mensagens entre componentes é síncrona.
+	* A forma de envio vai depender do padrão adotado (vide EIP Patterns)
+
+
+- Introducing a new IT operating model
+	* As primeiras duas camadas são destinadas ao negócio;
+	* Business layer depende do Business goal
+	* Process API: processos de negócio que podem ser reaproveitados entre projetos, encapsulados de business rules;
+	* Experience API: projetos diferentes;
+	* System API: expor recursos da aplicação (quando eu tenho system APIs que possuem funções similares, eu promovo a funcionalidade a um business Process para encapsular essa regra similar, onde meus System API consomem esse process API)
+	* A única camada que fica exposta é a Experience API, as outras duas camadas ficam dentro de uma VPC (Virtual Private Cloud)
+	* Não preciso das 3 camadas para ter uma API-led, preciso necessariamente de Experience e System APIs.
+	* Process APIs são criadas para linhas de negócios, não so funcionalidades;
+	* Unlock na System; Agregação de negócio na Process e exposição de dados na Experience, onde geralmente as camadas Process e system são privativas. 
+	* New way of working: ao invés de criar novos projetos para cada problema, criar assets que possam ser reutilizados futuramente para diferentes necessidades.
+
 
 <a id="day3"/></a>
 ## Day 3 - 11/09/19 
@@ -126,6 +154,7 @@
 
 <a id="importantReview"/></a>
 ## ==Importantes Termos / Acrónimos (para Revisar)==
+- VPC: Virtual Private Cloud
 - LoB IT: Line of Business
 - Central IT: Desenvolvedores (nós)      
 - [C4E](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide18.png): Center for Enablement
