@@ -4,6 +4,7 @@
 - <a href="#day4">Day 4</a>
 - <a href="#day5">Day 5</a>
 - <a href="#day6">Day 6</a>
+- <a href="#possibleQuestions">Day 6</a>
 - <a href="#importantReview">Importantes Termos / Acrónimos (para Revisar)</a>
 
 <a id="day1"/></a>
@@ -90,7 +91,7 @@
 	* Utilização de Mock Service
 	* Publicação da API no Exchange, conceito de ser Discoverable (forma pública e privada)
 
-### _Módulo 4: Bulding APIS_
+### _Módulo 4: Bulding APIS_ (Parte 1)
 - Módulo Totalmente Prático abordando:
 	* [Criação de Aplcação no Anypoint Studio](http://bit.ly/2kNDwqi)
 	 + Criação de flows 
@@ -98,9 +99,22 @@
 
 <a id="day6"/></a>
 ## Day 6 - 16/09/19 
+
+### _Módulo 4: Bulding APIS_ (Parte 2)
+- [DataWeave 2.0](http://bit.ly/2mf27Vq): Linguagem para acessar, pesquisar e transformar dados.
+- Parte prática:
+	* Transformação de dados (mapeamento) com DataWeave
+	* Importar nosso projeto do Anypoint para o Studio
+	* Feito endpoints dos verbos GET (byId e geral) / POST
+	* 
+
+- [API Kit Router](http://bit.ly/2kzIRBL): 
+	* Le RAML importado e cria toda estrutura abstraindo em `conectores` / `fluxos` / `validações`.
+	* Faz match para criar flows usando `Verbo` e `Path`, criando somente um Event Source (Api KitRouber) que redireciona corretamente para respectivo flow. 
+	* Cria toda estrutura de validação de atributos (required, tipo, etc)
+
 ### _Módulo 5: Deploying And Managing Apis_
-- a
-- b
+
 
 <a id="importantReview"/></a>
 ## ==Importantes Termos / Acrónimos (para Revisar)==
@@ -111,6 +125,15 @@
 - [API Life Cycle](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide48.png): Fases de desenvolvimento de uma API
 - Unlock your data: Expor recursos/dados
 - iPaaS: Integration platform as a service. Isso é o que o Mule é
+- API Kit: Valida requests com relação às especificações do RAML e as direciona para implementações da API, criando toda estrutura com base nisso (conectores, validações, etc)
+
+<a id="possibleQuestions"/></a>
+## Possíveis questões de prova:
+- Com base em que o API Kit Router cria os flows ao ser importado? 
+	* Para fins de prova, cada HTTP Method.
+- Qual é a configuração mínima necessária em um fluxo para uma aplicação Mule compilar? 
+	* Event Processor
+
 
 ### Search Later / Review
 - Governância de API (pesquisar contexto geral)
