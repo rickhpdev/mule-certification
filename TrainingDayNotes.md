@@ -4,7 +4,7 @@
 - <a href="#day4">Day 4</a>
 - <a href="#day5">Day 5</a>
 - <a href="#day6">Day 6</a>
-- <a href="#possibleQuestions">Day 6</a>
+- <a href="#possibleQuestions">Possíveis questões de prova</a>
 - <a href="#importantReview">Importantes Termos / Acrónimos (para Revisar)</a>
 
 <a id="day1"/></a>
@@ -126,6 +126,7 @@
 - Unlock your data: Expor recursos/dados
 - iPaaS: Integration platform as a service. Isso é o que o Mule é
 - API Kit: Valida requests com relação às especificações do RAML e as direciona para implementações da API, criando toda estrutura com base nisso (conectores, validações, etc)
+
 
 <a id="possibleQuestions"/></a>
 ## Possíveis questões de prova:
