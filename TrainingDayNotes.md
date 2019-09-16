@@ -3,6 +3,7 @@
 - <a href="#day3">Day 3</a>
 - <a href="#day4">Day 4</a>
 - <a href="#day5">Day 5</a>
+- <a href="#day5">Day 6</a>
 - <a href="#importantReview">Importantes Termos / Acrónimos (para Revisar)</a>
 
 
@@ -60,7 +61,7 @@
  * Business outcomes: Alinhamento com stakeholders.
  * Technology Delivery: Utilizar Anypoint Platform para desenvolver as soluções.
  * Organization enablement: Capacitação da organização.
-- **API Designer**: Construir toda a API como por exemplo, escrever o RAML (Contrato da API). Dentro dele tem recursos como `Shelf`, `Criar Mapeamento de Dados`, `Criar Examples`, etc.
+- **API Designer**: Construir toda a especificação API como por exemplo, escrevendo o RAML (Contrato da API). Dentro dele tem recursos como `Shelf`, `Criar Mapeamento de Dados`, `Criar Examples`, etc.
 - **API Console**: Mapeamento que reflete visualmente o que criado pelo RAML (Endpoints, Exemplos de Entradas e Saidas, etc). Basicamente é o API Portal durante desenvolvimento.
 - **API Portal**: Documentação sobre a API que é gerada dinamicamente com base no YAML (Endpoints, Possíveis Response codes, etc). Basicamente é o API Console publicado.
 - **API Notebook**: Maneira de criar tutoriais e exemplos com exemplos de código executáveis. (Não cobrado na prova, recurso pouco utilizado).
@@ -76,21 +77,31 @@
 
 <a id="day5"/></a>
 ## Day 5 - 13/09/19 
-## TODO: Revisar módulos e fazer mais anotações
-### [Módulo Design APIs](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3807/8aac83b8-c6fc-3f51-bb6d-9e70bbca086d?complete=0&tab=overview)
+### _Módulo 3: Design APIs_
 - RAML
 	* Utilizado para documentar RESTFull APIs
 	* Baseado em Indentação por nível
-	* ... Escrever mais definições
+- API Designer shelf: Auto-complete/Sugestões que aparecem durante design do RAML no Design API.
+- Mapeamento de exemplo(s) no RAML seguindo key "example" e "examples" (collection).
+- Para criar examples sempre preferível criar em JSON por questões de como Mule converte RAML.
+- Módulo Totalmente Prático abordando:
+	* [Criação de RAML](http://bit.ly/2lPXelG)
+	 + Criação de Endpoints para todos verbos com algumas variações
+	 + Mapeamento de Exemplos de Input / Output
+	 + Mapeamento para Status Code específicos
+	 + Campos required ou não (tag `?` pra não ser required)
+	* Utilização de Mock Service
+	* Publicação da API no Exchange, conceito de ser Discoverable (forma pública e privada)
 
-- Mocking Service: 
-- API Designer shelf: Auto-complete/Sugestoes que aparece durante design do RAML no Design API
-- Mapeamento de exemplo(s) no RAML seguindo key "example" e "examples" (collection)
-- Para criar examples sempre preferível criar em JSON por questões de como Mule converte RAML
-- Sumarizar: https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3813/89fbd216-f67b-3e61-8523-3d05b004d087?complete=0&tab=overview
+### _Módulo 4: Bulding APIS_
+- Módulo Totalmente Prático abordando:
+	* [Criação de Aplcação no Anypoint Studio](http://bit.ly/2kNDwqi)
+	 + Criação de flows 
+	 + Conectores diversos como: `Logger`, `setPayload`, `Select (Banco)`, `Transform`.
 
-### [Módulos Bulding APIS](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3814/253233a5-a7d9-3f28-b0af-c1138f1bea67?complete=0&tab=overview)
-
+<a id="day6"/></a>
+## Day 6 - 16/09/19 
+### _Módulo 5: Deploying And Managing Apis_
 - a
 - b
 
