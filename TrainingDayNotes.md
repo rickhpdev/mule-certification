@@ -55,9 +55,9 @@
 ### _Módulo 2: Introducing anypoint platform_
 - Apresentado Anypoint Plataform que é: Uma plataforma empresarial para criação de APIs, integrações e redes de aplicativos.
 - [Pilares da abordagem MuleSoft](http://bit.ly/2lS1G3c)
- * Business outcomes: Alinhamento com stakeholders.
- * Technology Delivery: Utilizar Anypoint Platform para desenvolver as soluções.
- * Organization enablement: Capacitação da organização.
+  * Business outcomes: Alinhamento com stakeholders.
+  * Technology Delivery: Utilizar Anypoint Platform para desenvolver as soluções.
+  * Organization enablement: Capacitação da organização.
 - **API Designer**: Construir toda a especificação API como por exemplo, escrevendo o RAML (Contrato da API). Dentro dele tem recursos como `Shelf`, `Criar Mapeamento de Dados`, `Criar Examples`, etc.
 - **API Console**: Mapeamento que reflete visualmente o que criado pelo RAML (Endpoints, Exemplos de Entradas e Saidas, etc). Basicamente é o API Portal durante desenvolvimento.
 - **API Portal**: Documentação sobre a API que é gerada dinamicamente com base no YAML (Endpoints, Possíveis Response codes, etc). Basicamente é o API Console publicado.
