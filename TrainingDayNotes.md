@@ -140,7 +140,7 @@ AnypointMQ é o serviço de mensageria Mule
 	* Feito endpoints dos verbos GET (byId e geral) / POST
 	* Apontado Interface (projeto importado) paras Implementações no Anypoint Studio.
 
-### _Módulo 5: Deploying And Managing Apis_
+### _Módulo 5: Deploying And Managing Apis_ (Parte 1)
 - CloudHub (`PaaS`): Ambiente de cloud da Mulesoft que roda na `AWS` para hospedar aplicações, conta com uma ótima estrutura já pronta.
 - Customer-hosted Mule runtimes: Caso a empresa queira hospedar por contra própria utilizando o próprio ambiente ou outro serviço de cloud.
 - [CloudHub Worker](http://bit.ly/2lSXS1E): Instância dedicada do Mule que executa uma aplicação, sendo que cada um:
@@ -151,6 +151,31 @@ AnypointMQ é o serviço de mensageria Mule
 	* Deployada aplicação no CloudHub
 	* Monitoração da API através to `Runtime Manager` ao efetuar requisições para aplicação Deployada.
 
+## Day 7 - 17/09/19 
+### _Módulo 5: Deploying And Managing Apis_ (Parte 2)
+- [API Proxy](http://bit.ly/2kBDJwZ): Controla o acesso a um serviço, restringindo o acesso e o uso pelo uso de um gateway. Responsável por garantir que políticas para acesso sejam aplicadas, tendo benefícios
+	* Segurança: Ter camada para filtrar chamadas não autorizadas.
+	* Evitar onerar serviço: Possibilidade de limitar/filtrar quantidade de requisições.
+- [API Gateway](http://bit.ly/2lSGjio): Ponto central de controle, faz com que as políticas aplicadas no API Proxy sejam aplicadas. O que ele também faz:
+	* Determina quais tráfegos estão autorizados para passar pela API
+	* Mede o tráfico
+	* Loga todas transações
+- Unidade de Medida no Mule: Mule Message (Evento)
+- API Manager: Ferramenta para gerenciar Governança e Métricas
+- Parte prática:
+	* Criado proxies para um API Gateway runtime
+	* Analisados dados analíticos com API Manager
+	* Restringindo acesso a API utilizando o API Manager (gerenciar acesso)
+	* Criação de Policies simples para exemplificar
+- [Continuar Daqui!](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3827/75947d46-c023-3494-aec5-5298f41c905e?complete=0&tab=overview)
+- >>> Pegar resto das notas...
+
+### _Módulo 6: Deploying And Managing Apis_
+- a
+- b
+- Parte prática:
+	* Visto informações do data-sense nas em `design time` e `run time`
+	* Visto como depurar aplicação e ver informações
 
 <a id="importantReview"/></a>
 ## ==Importantes Termos / Acrónimos (para Revisar)==
@@ -164,6 +189,8 @@ AnypointMQ é o serviço de mensageria Mule
 - iPaaS: Integration platform as a service. Mule se encaixa nessa categoria.
 - API Kit: Valida requests com relação às especificações do RAML e as direciona para implementações da API, criando toda estrutura com base nisso (conectores, validações, etc)
 - CloudHub: Ambiente de cloud da Mulesoft
+- SLA: Service Level Agreement: Define a quantidade de solicitações que podem ser feitas por período a uma API, podendo ser feito por grupo
+
 
 
 <a id="possibleQuestions"/></a>
@@ -174,6 +201,10 @@ AnypointMQ é o serviço de mensageria Mule
 	* Event Processor
 - Quantas aplicações um CloudHub worker roda?
 	* Somente UMA 
+- Quem é responsável por aplicar/fazer enforce das políticas de segurança?
+	* API Gateway (que faz enforce das policies)
+- Qual serviço é relacionado a Governancia/Gerencia/Métricas?
+	* API Manager
 
 
 ### Search Later / Review
