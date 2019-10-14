@@ -170,12 +170,148 @@ AnypointMQ é o serviço de mensageria Mule
 - [Continuar Daqui!](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3827/75947d46-c023-3494-aec5-5298f41c905e?complete=0&tab=overview)
 - >>> Pegar resto das notas...
 
-### _Módulo 6: Deploying And Managing Apis_
-- a
-- b
+### _Módulo 6: Accessing And Modifying Mule Events_ (Parte 1)
 - Parte prática:
 	* Visto informações do data-sense nas em `design time` e `run time`
 	* Visto como depurar aplicação e ver informações
+	* Contexto de manter variáveis ao realizar chamada externa
+
+## Day 8 - 18/09/19 
+### _Módulo 6: Accessing And Modifying Mule Events_ (Parte 2)
+- [DataWeave](http://bit.ly/2lVBUuY): Linguagem Mule para transformação e manipulação de dados
+- Tipos de DataWeave expressions
+	* Standalone scripts
+		+ Gerados usando o editor gráfico do componente Transform Message
+	* Inline expressions
+		+ Implementação em código do DataWeave 
+- [Parte prática](http://bit.ly/2lX7hFD): 
+	* Definido valores de Header/QueryParams no próprio componente de HTTP Listerner/Request
+	* Utilizada funções do DataWeave (upper) e operator (++ para concatenar Strings)
+	* Acessado valores do Mule Message (Headers, QueryParams) com o DW
+	* Manipulada a variável `payload` que tem o contexto de tráfego do Body entre os conectores
+	* Implementado a funcionalidade de `default value` para evitar NullPointers, também discutido entre quando usar `required` ou `default value` para contornar essa situação.
+	* Utilizando `variables` para armazenar e acessar valores
+
+### _Módulo 7: Structuring Mule Applications_ (Parte 1)
+- Parte prática:
+	* Introdução a Subflows
+	* Contexto dos parametros no subflow e flow (variables, attributes)
+	* Contexto de variáveis persistem dentro do contexto da aplicação (não persistida em chamadas internas)
+
+## Day 9 - 19/09/19 
+### _Módulo 7: Structuring Mule Applications_ (Parte 2)
+- Filas
+	* Persistente: Mensagens são persistidas pelo serviço de mensageria, mais lento porém mais segundo
+	* Transiente: O ciclo de vida da mensagens ficam a cargo do Publisher/Consumer, caso algum dos serviços caiam, as  mensagens "se perdem"
+- Arquivo `xml` que transcreve o flow do canvas é denominado  de `configuration file`
+- Contexto de parâmetros/variareis mudam (não são acessíveis) ao ir para um fluxo assíncrono pois se assemelha a uma chamada externa
+- Projetos Mule 4 são baseados em Maven obrigatoriamente
+- 
+	
+- [Parte prática](http://bit.ly/2ksZGy8):
+	* Desenvolvimento da aplicação utilizando Filas Transientes
+	* Publicados e consumidos eventos na fila de forma sincronía e asíncrona 
+	* Organização de arquivos para seguir "boas práticas de organização", separando arquivos de propriedades, configuração, separação de flows em outros arquivos, etc.
+	* Criação de configurações globais de conectores em um arquivo específico para "herdar" para todo projeto
+	* Criação de manipulação de properties files
+	* Review sobre Maven, estrutura de pastas, resources, etc
+
+
+## Day 10 - 20/09/19 
+### _Módulo 8: Consuming Web Services_ [Reforçar]
+- Connectors and Modules
+	* Modules: São componentes que executam ações mas não conectam nada (não fazem chamadas externas)
+	* Connectors: Todo conector é um módulo, com a diferença que de fato se conecta a algo. 
+	* Um componente pode englobar Modulo e Conectores, exemplo: HTTP, SalesForce, etc
+- Níveis de componentes do Exchange: Tem [vários levels de conectores](http://bit.ly/2kTOBGo) que refletem em nível de suporte, sendo eles: `Premium`, `Select`, `MuleSoft Certified`, `Community`. Que são refletidos [nesses 3 Tiers](http://bit.ly/2krt4ES).
+- ...
+
+
+## Day 11 - 23/09/19 
+### _Módulo 9: Controlling Event Flow_ [Reforçar]
+- Scatter-Gather: Execute vários flows ao mesmo tempo de forma paralela, o retorno é sempre um Objeto de Objetos.
+- Flatten: Agrega saída de cada flow se utilizado junto com Scatter-Gather, no geral é para manipular e juntar dados
+- Módulo Validator: Para validação de dados, diversos processadores pré-prontos para validações diversas
+- Ao não atender requisitos do Validator, comportamento default é retornar erro na Request interrompendo a sequencia do flow.
+- Parte Prática:
+	* Utilizado Scatter-Gather
+	* Utilizado `Flatten` para mudar retorno do componente
+	* Utilizado módulo `Validator` com operações para validações de dados: isNumber, isNull, etc
+
+### _Módulo 12: Triggering Flows_ (Adiantando Módulo) [Reforçar]
+- a
+- b
+
+------------- ESCREVER MÓDULOS PASSADOS AQUI -------------
+
+
+### _Módulo XX: Writing Data-weave Transformations_ 
+- Módulo destinado a se aprofundar em escrever expressões DataWeave sem Interface gráfica
+- Ao converter o payload de `json` para `java` sem definir um tipo específico, o Mule vai tentar representar da melhor forma utilizando estruturas do Java (classes, collections, etc).
+- Data Model: É o lugar onde aplicamos nossas expressões/transformações em Dataweave
+- Ao trabalhar com transformações manipulamos os [seguintes tipos de data](http://bit.ly/2M3YY5x):
+	* Objetos
+	* Listas
+	* Literais
+- Mime Types: Possíveis outputs que definimos para nosso script, ex: `application/java`, `...xml`, `...json`.
+	* O `aaplication/dw`
+- No Dataweave temos [2 tipos de erros](http://bit.ly/2IFA5uN):
+	* Scripting errors: Problema com syntax
+	* Formatting erros: Erros de transformação de um tipo para outro
+- Modelo Canônico: Forma que usa pra representar modelo do nosso domínio
+- Para output em `XML` temos algumas tratativas específicas, por exemplo:
+	* [Ter um elemento pai](http://bit.ly/2B0Mi96)
+	* [Referenciar atributos com `@`](http://bit.ly/2IEFe6p)
+- Para de transformação de dados com DataWeave utilizando função `map`. Podemos referenciar o key/value do lambda de [forma implícita](http://bit.ly/324B3IC) com os valores `$$` e `$` respectivamente ou declarar de [forma explícita](http://bit.ly/2OC2HJc).
+- A transformação em `XML` é feita de [forma diferente em questão de syntax](http://bit.ly/2nyqmPs)
+- Ao converter para `application/java`:
+	* Podemos converter os tipos de uma [forma genérica para um tipo](http://bit.ly/35oIvQR) (com palavras reservadas)
+	* Podemos também converter [especificando a package/classe java](http://bit.ly/33m2q12) 
+	* Ao realizar conversões, podemos especificar máscaras utilizando a tag `format`
+- A tag **format**: 
+	* Pode ser utilizada ao manipular alguns atributos que tem outputs específicos, como: String, Date, etc. 
+	* Utilizando o `#` a formatação é opcional, já utilizando o `0` a formatação se torna obrigatória.
+- Podemos criar tipos de dados específicos, [externalizando a formatação para reutilização](http://bit.ly/2MBnAlb)
+- Também podemos [criar nossos tipos de conversões específicos (mascaras)](http://bit.ly/2B0X66X) que são [baseados em classes POJO](http://bit.ly/2q7bWa9) por exemplo e [utilizar da mesma forma que tipos default](http://bit.ly/32bEwoM)
+- Ao utilizar [funções do DataWeave](http://bit.ly/2q7gJs9), temos as ja herdadas por default (já estão no core), para [as demais devemos importar](http://bit.ly/2Vz2Heh)
+- [==== REVER SUMMARY ====](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3879/948665de-6863-3155-9472-6223a10ff718?complete=0&tab=overview)
+
+### _Módulo XX: Processing Records_ 
+- Foreach
+	* Não altera o Payload após a interação e retorna a mesma entrada (payload) para o próximo componente, ou seja, **toda alteração dentro do foreach sem escopo local**
+	* Possui uma variável específica (um counter) para armazenar temporariamente o índice do Loop
+	* Componente de processamento síncrono, utilizam a mesma thread para processamento de todos os items
+	* Itera **somente sobre arrays**, qualquer outro tipo de estrutura de dados lançaria uma excessão
+- The Batch Scope
+	* A principal diferença do `foreach` é esse componente **ser assíncrono**, quebrando dados em blocos para processamento paralelo
+	* Controla excessão a nível de bloco de processamento
+	* Principais usos:
+		+ Processamento Paralelo
+		+ ETL 
+		+ Integrações próximos a runtime
+		+ Lidar com grande quantidade de entrada de dados
+	* [O processo possui 3 passos](http://bit.ly/317MXAc)
+		+ **Load and dispatch** (Implicito): Agrupa registros em blocos (records) e envia para fila
+		+ **Process** (Required): Processa records de forma assíncrona, supondo que tenhamos `3 batch steps`, nada garante que o registro que acaba de ser processado no `1o step` vai diretamente para o `2o step`, ao ser processado ele vai novamente para fila esperando as próximas fases de processamento 
+		+ **On complete** (Optional): Sumário dos registros processados, mostra report de quais registros tiveram erros ao processar
+	* Escopo de variáveis
+		+ Variáveis declaradas fora do escopo do batch:
+			+ São acessíveis dentro do batch processor mas a variável em si é imutável, ou seja, mesmo que altere dentro desse contexto, o valor original da variável é mantida ao fim do processamento do batch 
+			+ Cada record (grupo de registros), faz uma "cópia" dessa variável, portanto a alteração de um record não interfere em outro, e as alterações feitas são mantidas somente no contexto daquele record
+		+ Variáveis declaradas dentro do escopo dos batch steps:
+			+ O escopo também é por record (bloco)
+			+ Uma variável declarada num batch step anterior é acessível aos steps posteriores, também levando em conta o contexto de record
+			+ São somente visíveis dentro dos batch steps, fora desse contexto a variável não existe
+			+ As etapas (Load / Process / Complete) não compartilham contexto de variável
+		+ [Estratégia de tratamento de erros](http://bit.ly/2MdxASl): *Sempre feitos a nível de blocos*
+			+ Stop processing: Para todo o batch, não levando em conta os blocos
+			+ Continue processing: Ao ocorrer erro, definir tratativa para continuar processamento nos próximos steps
+			+ Continue until a max number o failures: Configurar numero X de falhas, indo para a fase `On Complete`
+	- Saída da fase `On Complete`: O valor do `payload` é um relatório de processamento por bloco, um objeto com N informações referentes ao processamento 
+	- [Filtering](http://bit.ly/31dgkRH): Para aplicar N filtros para, por exemplo, definir as condições para ir pro próximo `batch step` ou não
+	- [Agregator](http://bit.ly/2nPugDS)
+		+ Cria uma regra para "juntar registros do bloco" para ser processados em conjunto, o número de registros é configurável
+		+ "Juntar registros" no Agregator não bloqueia próximos passos de serem executados, é uma espécie de processo paralelo
 
 <a id="importantReview"/></a>
 ## ==Importantes Termos / Acrónimos (para Revisar)==
@@ -189,8 +325,7 @@ AnypointMQ é o serviço de mensageria Mule
 - iPaaS: Integration platform as a service. Mule se encaixa nessa categoria.
 - API Kit: Valida requests com relação às especificações do RAML e as direciona para implementações da API, criando toda estrutura com base nisso (conectores, validações, etc)
 - CloudHub: Ambiente de cloud da Mulesoft
-- SLA: Service Level Agreement: Define a quantidade de solicitações que podem ser feitas por período a uma API, podendo ser feito por grupo
-
+- SLA (Service Level Agreement): Define a quantidade de solicitações que podem ser feitas por período a uma API, podendo ser feito por grupo
 
 
 <a id="possibleQuestions"/></a>
@@ -205,6 +340,19 @@ AnypointMQ é o serviço de mensageria Mule
 	* API Gateway (que faz enforce das policies)
 - Qual serviço é relacionado a Governancia/Gerencia/Métricas?
 	* API Manager
+- Perguntas em geral em relação a DataWeave:
+	* Como fazer conversões
+	* Como manipular datas
+	* Em relação a operators, como utilizar em situação X
+- Como acessar valores de [contextos específicos](http://bit.ly/2lSOdYZ) como por exemplo: Server, Mule Instance, Mule Application, etc. Também se atentar ao contexto da variável, se é acessível do ponto que está sendo chamado.
+- Muitas perguntas em relação a supostos fluxos e contextos da Mule Message (Variáveis, Headers, Payload, etc), como isso muda ao ir para contexto um serviço externo, subflow, etc.
+- Como lidar com XML no processo de manipulação/transformation utilizando Dataweave (tags específicas, etc)
+- Escopos de variáveis/funções no escopo das expression do Dataweave (global, local), exemplos práticos em relação a isso
+- Questões referentes a transformation, vão vir no [formato input/transformation/output](http://bit.ly/317e9iu)
+- Questões referentes a funções aninhadas, [vai ter o script do lado esquerdo e a pergunta será referente a saída](http://bit.ly/2AZU6b4)
+
+========== [REVER Parte do JESUS](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3780/cd916a52-1fd0-3420-b170-ce2b4bfeced0?complete=0&tab=overview) ========
+- var / fun / using (reforçar bem) e também ver `..*` 
 
 
 ### Search Later / Review
