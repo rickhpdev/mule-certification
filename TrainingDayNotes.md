@@ -1,14 +1,34 @@
 ## Sumário
+Intro
+---
+
 - <a href="#day1">Day 1</a> e <a href="#day2">Day 2</a>: Conjunto de [Slides](http://bit.ly/2mcVZNn) com Introdução a tópicos importantes/requisitos para treinamento.
-- <a href="#day3">Day 3</a>
-- <a href="#day4">Day 4</a>
-- <a href="#day5">Day 5</a>
-- <a href="#day6">Day 6</a>
+
+Módulos
+---
+
+- <a href="#modulo1">Módulo 1: Introducing Application Networks And Api-led Connectivity</a>
+- <a href="#modulo2">Módulo 2: Introducing anypoint platform</a>
+- <a href="#modulo3">Módulo 3: Design APIs</a>
+- <a href="#modulo4">Módulo 4: Bulding APIS</a>
+- <a href="#modulo5">Módulo 5: Deploying And Managing Apis</a>
+- <a href="#modulo6">Módulo 6: Accessing And Modifying Mule Events</a>
+- <a href="#modulo7">Módulo 7: Structuring Mule Applications</a>
+- <a href="#modulo8">Módulo 8: Consuming Web Services</a>
+- <a href="#modulo9">Módulo 9: Controlling Event Flow</a>
+- <a href="#modulo10">Módulo 10: Handling Errors</a>
+- <a href="#modulo11">Módulo 11: Writing Data-weave Transformations</a>
+- <a href="#modulo12">Módulo 12: Triggering Flows</a>
+- <a href="#modulo13">Módulo 13: Processing Records</a>
+
+Extra
+---
+
 - <a href="#possibleQuestions">Possíveis questões de prova</a>
 - <a href="#importantReview">Importantes Termos / Acrónimos (para Revisar)</a>
 
 <a id="day1"/></a>
-## Day 1 - 09/09/19
+### Day 1 - 09/09/19
 - SOA (Service-Oriented Architecture)
 	* Arquitetura visando sempre agregar no negócio.
 	* Processo de design/desenvolvimento em mais alto nível de abstração visando ser visível para mais pessoas.
@@ -27,7 +47,7 @@
 	* Descrição e discussão sobre características
 
 <a id="day2"/></a>
-## Day 2 - 10/09/19
+### Day 2 - 10/09/19
 - EIP Patterns
 	- Request-reply: two way communication
 	- Message Router: decisão de roteamento não está relacionada ao conteúdo da mensagem
@@ -58,8 +78,7 @@ AnypointMQ é o serviço de mensageria Mule
 	* New way of working: ao invés de criar novos projetos para cada problema, criar assets que possam ser reutilizados futuramente para diferentes necessidades.
 
 
-<a id="day3"/></a>
-## Day 3 - 11/09/19 
+<a id="modulo1"/></a>
 ### _Módulo 1: Introducing Application Networks And Api-led Connectivity_
 - [Modelo que prioriza o consumo](http://bit.ly/2mdqxyA): Envolvidos focados em desenvolver com base em feedbacks e métricas de uso, criando Assests reutilizáveis seguindo o conceito de Modern API.
 - [Modern API](http://bit.ly/2khRUa9)
@@ -73,14 +92,13 @@ AnypointMQ é o serviço de mensageria Mule
 		+ Exemplo: CRUD de funcionários de duas bases diferentes se tornando 2 SystemAPIs
 - [C4E](http://bit.ly/2kLAwee): Time formado por profissionais de varias áreas, onde seu objetivo é planejar/desenvolver assets seguindo API-led e propagar isso na cultura da empresa.
 - Application Network: Rede de aplicações do projeto, construídas seguindo a API-led em conjunto com o C4E.
-- [Revisão sobre API](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide26.png): Define como acontece troca de informações entre dois ou mais sistemas. (operações, inputs, outputs)
-- [Revisão sobre WebServices](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide29.png): Método de comunicação que permite que dois sistemas de software troquem dados pela internet.
-- [Revisão sobre RESTful](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide33.png): O que é, princípios, verbos, estados, exemplos, etc.
-- [Ao se referir a API](https://training.mulesoft.com/static/MUContent/4.2/MUFundamentals4.2/slide_images/01_app_networks/Slide27.png), podemos estar falando sobre:  `Proxy` / `Implementação` / `Contrato`.
+- [Revisão sobre API](http://bit.ly/32l2Zbf): Define como acontece troca de informações entre dois ou mais sistemas. (operações, inputs, outputs)
+- [Revisão sobre WebServices](http://bit.ly/31kHwxK): Método de comunicação que permite que dois sistemas de software troquem dados pela internet.
+- [Revisão sobre RESTful](http://bit.ly/2IUJVZX): O que é, princípios, verbos, estados, exemplos, etc.
+- [Ao se referir a API](http://bit.ly/2ozaDjP), podemos estar falando sobre:  `Proxy` / `Implementação` / `Contrato`.
 - **Api-led** se refere a parar de construir projeto com business goals específicos, e construir assets que podem ser reutilizados em outros contextos.
 
-<a id="day4"/></a>
-## Day 4 - 12/09/19 
+<a id="modulo2"/></a>
 ### _Módulo 2: Introducing anypoint platform_
 - Apresentado Anypoint Plataform que é: Uma plataforma empresarial para criação de APIs, integrações e redes de aplicativos.
 - [Pilares da abordagem MuleSoft](http://bit.ly/2lS1G3c)
@@ -101,8 +119,7 @@ AnypointMQ é o serviço de mensageria Mule
 	* `Payload`: O dado que é processado (corpo)
 	* `Variables`: Metadata do MuleEvent
 
-<a id="day5"/></a>
-## Day 5 - 13/09/19 
+<a id="modulo3"/></a>
 ### _Módulo 3: Design APIs_
 - RAML
 	* Utilizado para documentar RESTFull APIs
@@ -119,16 +136,13 @@ AnypointMQ é o serviço de mensageria Mule
 	* Utilização de Mock Service
 	* Publicação da API no Exchange, conceito de ser Discoverable (forma pública e privada)
 
-### _Módulo 4: Bulding APIS_ (Parte 1)
+	
+<a id="modulo4"/></a>
+### _Módulo 4: Bulding APIS_
 - Módulo Totalmente Prático abordando:
 	* [Criação de Aplcação no Anypoint Studio](http://bit.ly/2kNDwqi)
 	 + Criação de flows 
 	 + Conectores diversos como: `Logger`, `setPayload`, `Select (Banco)`, `Transform`.
-
-<a id="day6"/></a>
-## Day 6 - 16/09/19 
-
-### _Módulo 4: Bulding APIS_ (Parte 2)
 - [DataWeave 2.0](http://bit.ly/2mf27Vq): Linguagem para acessar, pesquisar e transformar dados.
 - [API Kit Router](http://bit.ly/2kzIRBL): 
 	* Le RAML importado e cria toda estrutura abstraindo em `conectores` / `fluxos` / `validações`.
@@ -140,19 +154,18 @@ AnypointMQ é o serviço de mensageria Mule
 	* Feito endpoints dos verbos GET (byId e geral) / POST
 	* Apontado Interface (projeto importado) paras Implementações no Anypoint Studio.
 
-### _Módulo 5: Deploying And Managing Apis_ (Parte 1)
+<a id="modulo5"/></a>
+### _Módulo 5: Deploying And Managing Apis_
 - CloudHub (`PaaS`): Ambiente de cloud da Mulesoft que roda na `AWS` para hospedar aplicações, conta com uma ótima estrutura já pronta.
 - Customer-hosted Mule runtimes: Caso a empresa queira hospedar por contra própria utilizando o próprio ambiente ou outro serviço de cloud.
 - [CloudHub Worker](http://bit.ly/2lSXS1E): Instância dedicada do Mule que executa uma aplicação, sendo que cada um:
 	* Roda num container separado
 	* Deployado e monitorado separadamente
 	* Roda em uma específica região do mundo
+- [API Manager](http://bit.ly/2ISZjpq): Colocar
 - Parte prática:
 	* Deployada aplicação no CloudHub
 	* Monitoração da API através to `Runtime Manager` ao efetuar requisições para aplicação Deployada.
-
-## Day 7 - 17/09/19 
-### _Módulo 5: Deploying And Managing Apis_ (Parte 2)
 - [API Proxy](http://bit.ly/2kBDJwZ): Controla o acesso a um serviço, restringindo o acesso e o uso pelo uso de um gateway. Responsável por garantir que políticas para acesso sejam aplicadas, tendo benefícios
 	* Segurança: Ter camada para filtrar chamadas não autorizadas.
 	* Evitar onerar serviço: Possibilidade de limitar/filtrar quantidade de requisições.
@@ -170,14 +183,13 @@ AnypointMQ é o serviço de mensageria Mule
 - [Continuar Daqui!](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3827/75947d46-c023-3494-aec5-5298f41c905e?complete=0&tab=overview)
 - >>> Pegar resto das notas...
 
-### _Módulo 6: Accessing And Modifying Mule Events_ (Parte 1)
+
+<a id="modulo6"/></a>
+### _Módulo 6: Accessing And Modifying Mule Events_
 - Parte prática:
 	* Visto informações do data-sense nas em `design time` e `run time`
 	* Visto como depurar aplicação e ver informações
 	* Contexto de manter variáveis ao realizar chamada externa
-
-## Day 8 - 18/09/19 
-### _Módulo 6: Accessing And Modifying Mule Events_ (Parte 2)
 - [DataWeave](http://bit.ly/2lVBUuY): Linguagem Mule para transformação e manipulação de dados
 - Tipos de DataWeave expressions
 	* Standalone scripts
@@ -192,22 +204,19 @@ AnypointMQ é o serviço de mensageria Mule
 	* Implementado a funcionalidade de `default value` para evitar NullPointers, também discutido entre quando usar `required` ou `default value` para contornar essa situação.
 	* Utilizando `variables` para armazenar e acessar valores
 
-### _Módulo 7: Structuring Mule Applications_ (Parte 1)
+
+<a id="modulo7"/></a>
+### _Módulo 7: Structuring Mule Applications_
 - Parte prática:
 	* Introdução a Subflows
 	* Contexto dos parametros no subflow e flow (variables, attributes)
 	* Contexto de variáveis persistem dentro do contexto da aplicação (não persistida em chamadas internas)
-
-## Day 9 - 19/09/19 
-### _Módulo 7: Structuring Mule Applications_ (Parte 2)
 - Filas
 	* Persistente: Mensagens são persistidas pelo serviço de mensageria, mais lento porém mais segundo
 	* Transiente: O ciclo de vida da mensagens ficam a cargo do Publisher/Consumer, caso algum dos serviços caiam, as  mensagens "se perdem"
 - Arquivo `xml` que transcreve o flow do canvas é denominado  de `configuration file`
 - Contexto de parâmetros/variareis mudam (não são acessíveis) ao ir para um fluxo assíncrono pois se assemelha a uma chamada externa
 - Projetos Mule 4 são baseados em Maven obrigatoriamente
-- 
-	
 - [Parte prática](http://bit.ly/2ksZGy8):
 	* Desenvolvimento da aplicação utilizando Filas Transientes
 	* Publicados e consumidos eventos na fila de forma sincronía e asíncrona 
@@ -217,7 +226,7 @@ AnypointMQ é o serviço de mensageria Mule
 	* Review sobre Maven, estrutura de pastas, resources, etc
 
 
-## Day 10 - 20/09/19 
+<a id="modulo8"/></a>
 ### _Módulo 8: Consuming Web Services_ [Reforçar]
 - Connectors and Modules
 	* Modules: São componentes que executam ações mas não conectam nada (não fazem chamadas externas)
@@ -227,9 +236,10 @@ AnypointMQ é o serviço de mensageria Mule
 - ...
 
 
-## Day 11 - 23/09/19 
+<a id="modulo9"/></a>
 ### _Módulo 9: Controlling Event Flow_ [Reforçar]
 - Scatter-Gather: Execute vários flows ao mesmo tempo de forma paralela, o retorno é sempre um Objeto de Objetos.
+	* Retorno do componente é Objeto de Objetos 
 - Flatten: Agrega saída de cada flow se utilizado junto com Scatter-Gather, no geral é para manipular e juntar dados
 - Módulo Validator: Para validação de dados, diversos processadores pré-prontos para validações diversas
 - Ao não atender requisitos do Validator, comportamento default é retornar erro na Request interrompendo a sequencia do flow.
@@ -238,14 +248,13 @@ AnypointMQ é o serviço de mensageria Mule
 	* Utilizado `Flatten` para mudar retorno do componente
 	* Utilizado módulo `Validator` com operações para validações de dados: isNumber, isNull, etc
 
-### _Módulo 12: Triggering Flows_ (Adiantando Módulo) [Reforçar]
-- a
-- b
-
-------------- ESCREVER MÓDULOS PASSADOS AQUI -------------
+	<a id="modulo10"/></a>
+### _Módulo 10: Handling Errors_ [Reforçar]
+- ..
 
 
-### _Módulo XX: Writing Data-weave Transformations_ 
+<a id="modulo11"/></a>
+### _Módulo 11: Writing Data-weave Transformations_ 
 - Módulo destinado a se aprofundar em escrever expressões DataWeave sem Interface gráfica
 - Ao converter o payload de `json` para `java` sem definir um tipo específico, o Mule vai tentar representar da melhor forma utilizando estruturas do Java (classes, collections, etc).
 - Data Model: É o lugar onde aplicamos nossas expressões/transformações em Dataweave
@@ -276,7 +285,13 @@ AnypointMQ é o serviço de mensageria Mule
 - Ao utilizar [funções do DataWeave](http://bit.ly/2q7gJs9), temos as ja herdadas por default (já estão no core), para [as demais devemos importar](http://bit.ly/2Vz2Heh)
 - [==== REVER SUMMARY ====](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3879/948665de-6863-3155-9472-6223a10ff718?complete=0&tab=overview)
 
-### _Módulo XX: Processing Records_ 
+<a id="modulo12"/></a>
+### _Módulo 12: Triggering Flows_ [Reforçar]
+- a
+- b
+
+<a id="modulo13"/></a>
+### _Módulo 13: Processing Records_ 
 - Foreach
 	* Não altera o Payload após a interação e retorna a mesma entrada (payload) para o próximo componente, ou seja, **toda alteração dentro do foreach sem escopo local**
 	* Possui uma variável específica (um counter) para armazenar temporariamente o índice do Loop
