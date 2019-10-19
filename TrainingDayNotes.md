@@ -7,10 +7,10 @@ Intro
 Módulos
 ---
 
-- <a href="#modulo1">Módulo 1: Introducing Application Networks And Api-led Connectivity</a>
-- <a href="#modulo2">Módulo 2: Introducing anypoint platform</a>
-- <a href="#modulo3">Módulo 3: Design APIs</a>
-- <a href="#modulo4">Módulo 4: Bulding APIS</a>
+- <a href="#modulo1">Módulo 1: Introducing Application Networks And Api-led Connectivity</a> [OK]
+- <a href="#modulo2">Módulo 2: Introducing anypoint platform</a> [OK]
+- <a href="#modulo3">Módulo 3: Design APIs</a> [OK]
+- <a href="#modulo4">Módulo 4: Bulding APIS</a> [OK]
 - <a href="#modulo5">Módulo 5: Deploying And Managing Apis</a>
 - <a href="#modulo6">Módulo 6: Accessing And Modifying Mule Events</a>
 - <a href="#modulo7">Módulo 7: Structuring Mule Applications</a>
@@ -79,7 +79,7 @@ AnypointMQ é o serviço de mensageria Mule
 
 
 <a id="modulo1"/></a>
-### _Módulo 1: Introducing Application Networks And Api-led Connectivity_
+### _Módulo 1: Introducing Application Networks And Api-led Connectivity_ [OK]
 - [Modelo que prioriza o consumo](http://bit.ly/2mdqxyA): Envolvidos focados em desenvolver com base em feedbacks e métricas de uso, criando Assests reutilizáveis seguindo o conceito de Modern API.
 - [Modern API](http://bit.ly/2khRUa9)
 	* É discoverable e projetada para fácil consumo.
@@ -99,7 +99,7 @@ AnypointMQ é o serviço de mensageria Mule
 - **Api-led** se refere a parar de construir projeto com business goals específicos, e construir assets que podem ser reutilizados em outros contextos.
 
 <a id="modulo2"/></a>
-### _Módulo 2: Introducing anypoint platform_
+### _Módulo 2: Introducing anypoint platform_ [OK]
 - Apresentado Anypoint Plataform que é: Uma plataforma empresarial para criação de APIs, integrações e redes de aplicativos.
 - [Pilares da abordagem MuleSoft](http://bit.ly/2lS1G3c)
   * Business outcomes: Alinhamento com stakeholders.
@@ -120,7 +120,7 @@ AnypointMQ é o serviço de mensageria Mule
 	* `Variables`: Metadata do MuleEvent
 
 <a id="modulo3"/></a>
-### _Módulo 3: Design APIs_
+### _Módulo 3: Design APIs_ [OK]
 - RAML
 	* Utilizado para documentar RESTFull APIs
 	* Baseado em Indentação por nível
@@ -135,10 +135,11 @@ AnypointMQ é o serviço de mensageria Mule
 	 + Campos required ou não (tag `?` pra não ser required)
 	* Utilização de Mock Service
 	* Publicação da API no Exchange, conceito de ser Discoverable (forma pública e privada)
+- [Exemplo de design de RAML com Inputs/Outputs exemplos](http://bit.ly/2lPWX28)
 
 	
 <a id="modulo4"/></a>
-### _Módulo 4: Bulding APIS_
+### _Módulo 4: Bulding APIS_ [OK]
 - Módulo Totalmente Prático abordando:
 	* [Criação de Aplcação no Anypoint Studio](http://bit.ly/2kNDwqi)
 	 + Criação de flows 
@@ -155,17 +156,18 @@ AnypointMQ é o serviço de mensageria Mule
 	* Apontado Interface (projeto importado) paras Implementações no Anypoint Studio.
 
 <a id="modulo5"/></a>
-### _Módulo 5: Deploying And Managing Apis_
+### _Módulo 5: Deploying And Managing Apis_ [OK]
 - CloudHub (`PaaS`): Ambiente de cloud da Mulesoft que roda na `AWS` para hospedar aplicações, conta com uma ótima estrutura já pronta.
 - Customer-hosted Mule runtimes: Caso a empresa queira hospedar por contra própria utilizando o próprio ambiente ou outro serviço de cloud.
-- [CloudHub Worker](http://bit.ly/2lSXS1E): Instância dedicada do Mule que executa uma aplicação, sendo que cada um:
+- [CloudHub Worker](http://bit.ly/2lSXS1E): Instância dedicada do Mule que executa **UMA aplicação**, sendo que cada um:
 	* Roda num container separado
 	* Deployado e monitorado separadamente
 	* Roda em uma específica região do mundo
-- [API Manager](http://bit.ly/2ISZjpq): Colocar
-- Parte prática:
-	* Deployada aplicação no CloudHub
-	* Monitoração da API através to `Runtime Manager` ao efetuar requisições para aplicação Deployada.
+- [API Manager](http://bit.ly/2ISZjpq): Lugar para gerenciar acesso a aplicação como:
+	* Criar e deployar proxies
+	* Definir níveis de SLAs (categorias de quantidade de acessos por minuto por exemplo) 
+	* Aprovar, Rejeitar e Revogar acessos as APIs para os clientes (Tokens)
+	* Ver dados analíticos das APIs
 - [API Proxy](http://bit.ly/2kBDJwZ): Controla o acesso a um serviço, restringindo o acesso e o uso pelo uso de um gateway. Responsável por garantir que políticas para acesso sejam aplicadas, tendo benefícios
 	* Segurança: Ter camada para filtrar chamadas não autorizadas.
 	* Evitar onerar serviço: Possibilidade de limitar/filtrar quantidade de requisições.
@@ -179,19 +181,15 @@ AnypointMQ é o serviço de mensageria Mule
 	* Criado proxies para um API Gateway runtime
 	* Analisados dados analíticos com API Manager
 	* Restringindo acesso a API utilizando o API Manager (gerenciar acesso)
-	* Criação de Policies simples para exemplificar
-- [Continuar Daqui!](https://training.mulesoft.com/user/consume/course_pathway/788a9b09-b663-3344-83d6-211080628b9f/3827/75947d46-c023-3494-aec5-5298f41c905e?complete=0&tab=overview)
-- >>> Pegar resto das notas...
+	* Criação de Policies simples (tempo de request por SLAs específicos) para exemplificar
+	* Deployada aplicação no CloudHub
+	* Monitoração da API através to `Runtime Manager` ao efetuar requisições para aplicação.
 
 
 <a id="modulo6"/></a>
 ### _Módulo 6: Accessing And Modifying Mule Events_
-- Parte prática:
-	* Visto informações do data-sense nas em `design time` e `run time`
-	* Visto como depurar aplicação e ver informações
-	* Contexto de manter variáveis ao realizar chamada externa
 - [DataWeave](http://bit.ly/2lVBUuY): Linguagem Mule para transformação e manipulação de dados
-- Tipos de DataWeave expressions
+
 	* Standalone scripts
 		+ Gerados usando o editor gráfico do componente Transform Message
 	* Inline expressions
@@ -203,6 +201,10 @@ AnypointMQ é o serviço de mensageria Mule
 	* Manipulada a variável `payload` que tem o contexto de tráfego do Body entre os conectores
 	* Implementado a funcionalidade de `default value` para evitar NullPointers, também discutido entre quando usar `required` ou `default value` para contornar essa situação.
 	* Utilizando `variables` para armazenar e acessar valores
+- Parte prática:
+	* Visto informações do data-sense nas em `design time` e `run time`
+	* Visto como depurar aplicação e ver informações
+	* Contexto de manter variáveis ao realizar chamada externa
 
 
 <a id="modulo7"/></a>
