@@ -1,14 +1,15 @@
 #### Why we define the `http.port` in the HTTP listener to deploy on cloudHub?
 - To API manager register on API Manager...
-- *Certa*: To ClouHub changes and allows http requests to your Listener
+- *Certa*: To ClouHub changes and allows http requests to your Listener receive external requests...
 
 #### Dentro do ScatterGatter, temos dois flows, um demora 10 segundos e outros 20 segundos, qual tempo de execução geral ?
 - *Certa*: 20 segundos (porque o flow só segue quanto o ultimo termina e ambos são processados em paralelo)
 
 #### 3 questões em cima de escopo de variáveis, tendo o mesmo endpoint `localhost/api?color=red`. Dado o contexto que temos um flow pai que chama um flow externo via HTTP request, no `mainFlow` sentamos um variável, variando as perguntas em:
-- O que está acessível num logger no fim no `Main flow`, que possui um Logger no Fim? (Payload / variável / QueryParam `color`)
-- O que está acessível num logger no fim no `Child flow`, que possui um Logger no Fim? (Payload / variável / QueryParam `color`)
-- Nesse mesmo contexto mas **alterando para o childFlow para um Flow Reference**, O que está acessível num logger no fim no `Child flow`, que possui um Logger no Fim? (Payload / variável / QueryParam `color`)
+![](http://bit.ly/35SUkir)
+- O que está acessível num logger no fim do `Main flow` (Payload / variável / QueryParam `color`)
+- O que está acessível num logger no fim do `Child flow` (Payload / variável / QueryParam `color`)
+- Nesse mesmo contexto mas **alterando o childFlow para um Flow Reference**, O que está acessível num logger no fim no `Child flow`, que possui um Logger no Fim? (Payload / variável / QueryParam `color`)
 
 #### Ao configurar um globalHandler, onde devemos configurar para "começar a valer"?
 - Property file
