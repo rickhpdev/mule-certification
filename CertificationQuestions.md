@@ -2,8 +2,8 @@
 - To API manager register on API Manager...
 - *Certa*: To ClouHub changes and allows http requests to your Listener
 
-#### No ScatterGatter, temos dois flows, um demora 10 segundos e outros 20 segundos, qual tempo de execução geral ?
-- *Certa*: 20 segundos
+#### Dentro do ScatterGatter, temos dois flows, um demora 10 segundos e outros 20 segundos, qual tempo de execução geral ?
+- *Certa*: 20 segundos (porque o flow só segue quanto o ultimo termina e ambos são processados em paralelo)
 
 #### 3 questões em cima de escopo de variáveis, tendo o mesmo endpoint `localhost/api?color=red`. Dado o contexto que temos um flow pai que chama um flow externo via HTTP request, no `mainFlow` sentamos um variável, variando as perguntas em:
 - O que está acessível num logger no fim no `Main flow`, que possui um Logger no Fim? (Payload / variável / QueryParam `color`)
@@ -78,8 +78,8 @@
 - Nenhum dos dois
  
 #### Qual vai ser a saida de `type of (payload)` se passarmos um xml em valor literal?
-- Por prática aqui
-
+- *Certa*: String, porque apesar do valor ser em `XML`, não setamos o Mymmetype
+ 
 #### Como importar/usar um módulos externo no `DW`?
 ```java
 %dw 2.0
@@ -127,4 +127,10 @@ toUpper("hello")
 	- Mapeamento de um erro X para um erro Y
 	- Ao erro ser tratado num nivel abaixo (num flow por exemplo) com `On Continue`, a partir de qual parte ele volta a executar
 - Transformações de `JSON` para `XML` e o inverso também, lembrar synxtax para ambos os casos (criar / acessar atributos XML)
+
+
+5232 8417 2592 9794
+RICARDO H PEREIRA
+08/26
+376.955.628-31
 
